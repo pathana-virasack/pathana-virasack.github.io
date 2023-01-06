@@ -1,5 +1,20 @@
-body{
-    box-sizing: border-box;
-    color: white;
-    background: #414141;
+@font-face {
+  font-family: "kaushan";
+  src: url(./Font/KaushanScript-Regular.ttf);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "kaushan", sans-serif;
+  color: white;
+  background: #414141;
+  width: 100%;
+  height: 100vh;
 }
