@@ -28,7 +28,7 @@ const mousesEffect = document.querySelectorAll(".mouse");
 
 window.addEventListener("mousemove", (e) => {
   mousesEffect.forEach((mouse) => {
-    mouse.style.left = e.x + "px";
-    mouse.style.top = e.y + "px";
+    mouse.style.left = e.pageX + "px";
+    mouse.style.top = e.pageY + "px";
   });
 });
