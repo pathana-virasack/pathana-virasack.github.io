@@ -14,6 +14,7 @@ body {
   font-family: "kaushan", sans-serif;
   width: 100%;
   height: 100vh;
+  cursor: none;
 }
 
 a {
@@ -30,7 +31,8 @@ h1 {
   font-size: 2.8em;
 }
 
-/* Navbar */
+/*-------- Navbar----------- */
+
 .navbar {
   margin: 0;
   padding: 0;
@@ -71,6 +73,8 @@ h1 {
   color: white;
 }
 
+/* ----------------------------- */
+
 /* container socials media */
 
 .media-container {
@@ -89,4 +93,43 @@ h1 {
 .media-btn a :hover {
   transform: scale(1.2);
   transition: 0.5s;
+}
+
+/* --------------------------- */
+
+/* ----------CSS Mouse-effect -------*/
+
+.mouse{
+position: absolute;
+top: 0;
+left: 0;
+transform: translate(-50%, -50% );
+mix-blend-mode:color-dodge; 
+}
+
+#cursor{
+  height: 12px;
+  width: 12px;
+  background: violet;
+  border: 1px solid violet;
+  border-radius: 50%;
+  transition: 0.1s; 
+}
+
+#first-cercle{
+  height: 50px;
+  width: 50px;
+  background: #2128bd;
+  border: 1px solid blue;
+  border-radius: 50%; 
+  transition: 0.2s ; 
+}
+
+#second-cercle{
+  height: 80px;
+  width: 80px;
+  background: rgba(172, 26, 26, 0.559);
+  border: 1px solid rgba(172, 26, 26, 0.559);
+  border-radius: 50%;
+  transition: 0.3s ;  
 }
