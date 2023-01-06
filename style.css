@@ -3,9 +3,7 @@
   src: url(./Font/KaushanScript-Regular.ttf);
 }
 
-*
-::before,
-::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,21 +12,63 @@
 body {
   background: url(./img/background-accueil.jpg) center / cover no-repeat;
   font-family: "kaushan", sans-serif;
-  color: white;
   width: 100%;
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
 h1 {
   text-align: center;
-  margin: 4rem auto;
+  margin: 3rem auto;
   font-size: 2.8em;
 }
 
 /* Navbar */
+.navbar {
+  margin: 0;
+  padding: 0;
+  height: 10%;
+  width: 100%;
+  background: #41414196;
+  border-bottom: 1px solid white;
+  font-family: sans-serif;
+}
 
-nav{
-    height: 90px;
+.navbar ul {
+  padding: 1.6rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar ul li {
+  padding: 0.8em 1.2em;
+  border: 1px solid #101010cb;
+  border-radius: 10px;
+}
+.navbar ul li:hover {
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.navbar ul li a {
+  font-size: 1.6em;
+  color: #fff;
+}
+
+.navbar ul li a:hover {
+  color: white;
 }
 
 /* container socials media */
@@ -45,7 +85,6 @@ nav{
   border-radius: 10px;
   padding: 0.8rem;
 }
-
 
 .media-btn a :hover {
   transform: scale(1.2);
