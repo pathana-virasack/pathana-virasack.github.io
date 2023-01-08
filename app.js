@@ -1,6 +1,6 @@
 // animation titre H1
 
-const txtTitleAnim = document.querySelector("h1");
+const txtTitleAnim = document.querySelector("#main-title");
 new Typewriter(txtTitleAnim, {
   // loop: true,
   deleteSpeed: 60,
