@@ -32,3 +32,26 @@ window.addEventListener("mousemove", (e) => {
     mouse.style.top = e.pageY + "px";
   });
 });
+
+// Navbar-effect
+
+const sidebar = document.querySelector("#side-bar");
+
+btn.addEventListener("click", () => {
+  sidebar.classList.toggle("active");
+});
+
+window.addEventListener("scroll", () => {
+  // Img profil effect
+
+  let scrollImg =
+    (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+
+  if (scrollImg > 1.3) {
+    presentationImg.style.opacity = 1;
+    presentationImg.style.transform = "none";
+  } else {
+    presentationImg.style.opacity = 0;
+    presentationImg.style.transform = "translateX(-200px)";
+  }
+});
