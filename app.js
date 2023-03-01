@@ -8,18 +8,19 @@ new Typewriter(txtTitleAnim, {
   .changeDelay(60)
   .typeString("Bonjour moi c'est Pathana")
   .pauseFor(300)
-  .typeString("<strong>, Dev Full-Stack</strong> !")
+  .typeString("<strong>, Dev Front-END</strong> !")
   .pauseFor(1000)
-  .deleteChars(13)
+  .deleteChars(12)
   .typeString("<strong><span style='color: #ff6910'> HTML</span> </strong> !")
   .pauseFor(1000)
   .deleteChars(7)
   .typeString("<strong><span style='color: #2965f1'> CSS</span> </strong> !")
   .pauseFor(1000)
   .deleteChars(6)
-  .typeString(
-    "<strong><span style='color: #f0db4f'> JAVASCRIPT</span> </strong> !"
-  )
+  .typeString("<strong><span style='color: #f0db4f'> JAVASCRIPT</span> </strong> !")
+  .pauseFor(1000)
+  .deleteChars(13)
+  .typeString("<strong><span style='color: #36a3c0'> REACT</span> </strong> !")  
   .start();
 
 // Mouse-effect

@@ -12,10 +12,11 @@
 }
 
 body {
+  background: #292929;
   height: 100vh;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  cursor: none;
+  /* cursor: none; */
   /* overflow: hidden; */
 }
 
@@ -37,16 +38,14 @@ li {
 }
 
 /*-------- Navbar----------- */
-.navbar a{
-  color :#843ffb;
+.navbar a {
+  color: #843ffb;
 }
 
-.navbar a:hover{
-  color :white;
+.navbar a:hover {
+  color: white;
   transition: 0.3s;
 }
-
-
 
 #side-bar {
   position: absolute;
@@ -55,8 +54,8 @@ li {
   background: #41414196;
   top: 0;
   left: -230px;
-  transition: 0.5s ease-out;
-  z-index: 4;
+  transition: 0.5s ease-out; 
+  z-index: 3; 
 }
 
 #side-bar.active {
@@ -89,7 +88,7 @@ li {
   width: 60px;
   height: 10px;
   border-radius: 5px;
-  background: #843ffb;
+  background: rgb(63, 63, 255);
   display: block;
   margin-top: 4px;
   transition: 0.3s ease;
@@ -182,13 +181,14 @@ li:hover {
 /* ----------PRESENTATION PAGE----- */
 
 .presentation-page {
-  background: #292929;
   height: 100vh;
   color: white;
   display: flex;
+  flex-direction: column;
 }
 
 .cv {
+  height: 30%;
   display: flex;
   justify-content: space-around;
   margin: 7% auto;
@@ -199,6 +199,7 @@ li:hover {
   display: flex;
   flex-direction: column;
   width: 80%;
+  margin-left: 5%;
 }
 
 #presentationImg {
@@ -208,9 +209,119 @@ li:hover {
 }
 
 #presentationImg img {
-  display: flex;
   width: 100%;
-  height: 35%;
-  padding-right: 2rem;
+  max-height: 80%;
   border-radius: 50%;
+}
+
+/* ----------CV CARDS----- */
+
+.cv-cards {
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+}
+
+.card {
+  position: relative;
+  width: 20%;
+  height: 150px;
+  background: #292929;
+  transition: 0.5s;
+}
+/* ----------CV CARDS EFFECTS----- */
+.card:hover {
+  height: 400px;
+}
+
+.card .lines {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.card .lines::before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 600px;
+  height: 120px;
+  background: linear-gradient(transparent,#45f3ff,#45f3ff,#45f3ff,transparent);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0%{
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, 50%) rotate(360deg);
+  }
+}
+
+.card .lines::after{
+  content:'';
+  position: absolute;
+  inset: 2px;
+  background: #1f1f1f;
+}
+
+.card .imgBox{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 120px;
+  background: #000;
+  transition: 0.5s;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.card:hover .imgBox{
+  width: 150px;
+  height: 150px;
+}
+
+
+.card .imgBox::before{
+  content:'';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 120px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(transparent,#ff3c7b,#ff3c7b,#ff3c7b,transparent);
+  animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+  0%{
+    transform: translate(-50%, 50%) rotate(360deg);
+  }
+  100%{
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+}
+
+.card .imgBox::after{
+  content:'';
+  position: absolute;
+  inset: 3px;
+  background: #1f1f1f;
+}
+
+.card-1 .imgBox img{
+  position: absolute;  
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);;
+
 }
