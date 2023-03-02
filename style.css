@@ -54,8 +54,8 @@ li {
   background: #41414196;
   top: 0;
   left: -230px;
-  transition: 0.5s ease-out; 
-  z-index: 3; 
+  transition: 0.5s ease-out;
+  z-index: 3;
 }
 
 #side-bar.active {
@@ -115,7 +115,7 @@ li:hover {
   text-align: center;
   margin: 3rem auto;
   font-size: 2.8em;
-  font-family: "kaushan";
+  font-family: "kaushan", sans-serif;
 }
 
 /* container socials media */
@@ -182,13 +182,21 @@ li:hover {
 
 .presentation-page {
   height: 100vh;
-  color: white;
   display: flex;
   flex-direction: column;
 }
 
+.presentation-page h2 {
+  color: #ff3c7b;
+}
+.presentation-page p {
+  color: white;
+  text-align: left;
+  line-height: 2em;
+}
+
 .cv {
-  height: 30%;
+  height: 40%;
   display: flex;
   justify-content: space-around;
   margin: 7% auto;
@@ -219,7 +227,7 @@ li:hover {
 .cv-cards {
   display: flex;
   justify-content: space-around;
-  z-index: 1;
+  z-index: auto;
 }
 
 .card {
@@ -229,9 +237,10 @@ li:hover {
   background: #292929;
   transition: 0.5s;
 }
+
 /* ----------CV CARDS EFFECTS----- */
 .card:hover {
-  height: 400px;
+  height: 550px;
 }
 
 .card .lines {
@@ -241,35 +250,41 @@ li:hover {
   overflow: hidden;
 }
 
-.card .lines::before{
-  content:'';
+.card .lines::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
   width: 600px;
   height: 120px;
-  background: linear-gradient(transparent,#45f3ff,#45f3ff,#45f3ff,transparent);
+  background: linear-gradient(
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff,
+    transparent
+  );
   animation: animate 4s linear infinite;
 }
 
 @keyframes animate {
-  0%{
+  0% {
     transform: translate(-50%, 50%) rotate(0deg);
   }
-  100%{
+  100% {
     transform: translate(-50%, 50%) rotate(360deg);
   }
 }
 
-.card .lines::after{
-  content:'';
+.card .lines::after {
+  content: "";
   position: absolute;
   inset: 2px;
   background: #1f1f1f;
 }
 
-.card .imgBox{
+.card .imgBox {
   position: absolute;
   top: -50px;
   left: 50%;
@@ -282,46 +297,115 @@ li:hover {
   overflow: hidden;
 }
 
-.card:hover .imgBox{
+.card:hover .imgBox {
   width: 150px;
   height: 150px;
 }
 
-
-.card .imgBox::before{
-  content:'';
+.card .imgBox::before {
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
   width: 600px;
   height: 120px;
   transform: translate(-50%, -50%);
-  background: linear-gradient(transparent,#ff3c7b,#ff3c7b,#ff3c7b,transparent);
+  background: linear-gradient(
+    transparent,
+    #ff3c7b,
+    #ff3c7b,
+    #ff3c7b,
+    transparent
+  );
   animation: animate2 6s linear infinite;
 }
 
 @keyframes animate2 {
-  0%{
+  0% {
     transform: translate(-50%, 50%) rotate(360deg);
   }
-  100%{
+  100% {
     transform: translate(-50%, 50%) rotate(0deg);
   }
 }
 
-.card .imgBox::after{
-  content:'';
+.card .imgBox::after {
+  content: "";
   position: absolute;
   inset: 3px;
   background: #1f1f1f;
 }
 
-.card-1 .imgBox img{
-  position: absolute;  
+.card .imgBox img {
+  position: absolute;
   top: 5px;
   left: 5px;
   z-index: 1;
   width: calc(100% - 10px);
-  height: calc(100% - 10px);;
+  height: calc(100% - 10px);
+}
 
+.card .content {
+  position: absolute;
+  font-size: 0.8rem;
+  padding: 8em 2em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.card .content li {
+  font-size: 0.8rem;
+}
+
+.card .content .details {
+  /* margin-top: 25%; */
+  /* padding: 40px; */
+  text-align: center;
+  width: 100%;
+  transition: 0.5s;
+  transform: translateY(350px);
+}
+
+.card:hover .content .details {
+  transform: translateY(0px);
+}
+
+.title-card {
+  position: absolute;
+  font-size: 2em;
+  font-weight: 600;
+  color: #ff3c7b;
+  line-height: 1.2em;
+  font-family: "kaushan", sans-serif;
+}
+
+.card .content .details h3 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #ff3c7b;
+  line-height: 1.2em;
+}
+
+.details .cv-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 50px 0 10px;
+}
+
+.content .details .cv-data h4,
+p {
+  text-align: center;
+  font-size: 1.1em;
+  color: #45f3ff;
+  line-height: 1.2em;
+  font-weight: 600;
+}
+
+.cv-data p {
+  color: #45f3ff;
 }
