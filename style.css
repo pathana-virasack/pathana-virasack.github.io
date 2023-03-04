@@ -22,6 +22,7 @@ body {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
@@ -93,7 +94,7 @@ li {
   margin-top: 4px;
   transition: 0.3s ease;
 }
-li {
+#side-bar li {
   color: #292929;
   list-style: none;
   font-size: 2.5rem;
@@ -138,8 +139,6 @@ li:hover {
   transform: scale(1.2);
   transition: 0.5s;
 }
-
-/* --------------------------- */
 
 /* ----------CSS Mouse-effect -------*/
 
@@ -210,6 +209,87 @@ li:hover {
   margin-left: 5%;
 }
 
+h1 {
+  color: #45f3ff;
+  font-family: "kaushan", sans-serif;
+  font-size: 2.5rem;
+}
+/* BUTTON DOWNLOAD CV */
+
+.buttons {
+  position: relative;
+  width: 220px;
+  height: 40px;
+  background: #000;
+  transition: 0.5s;
+  margin-top: 1.5rem;
+}
+
+.buttons:hover {
+  transform: scale(1.2);
+}
+
+.buttons .lines-btn {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.buttons .lines-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 100px;
+  background: linear-gradient(
+    transparent,
+    #45f3ff,
+    #45f3ff,
+    #45f3ff,
+    transparent
+  );
+  animation: animate1 5s linear infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, 50%) rotate(360deg);
+  }
+}
+
+.buttons .lines-btn::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: #1f1f1f;
+}
+
+#cv-btn {
+  position: absolute; 
+  background: transparent;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  height: 50px;
+  width: 150px;
+  text-transform: uppercase;
+  font-family: "kaushan", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+#cv-btn a {
+  color: #45f3ff;
+}
+
+/*IMAGE DE PROFIL*/
+
 #presentationImg {
   opacity: 0;
   transform: translateX(-200px);
@@ -265,10 +345,10 @@ li:hover {
     #45f3ff,
     transparent
   );
-  animation: animate 4s linear infinite;
+  animation: animate1 4s linear infinite;
 }
 
-@keyframes animate {
+@keyframes animate1 {
   0% {
     transform: translate(-50%, 50%) rotate(0deg);
   }
@@ -376,7 +456,7 @@ li:hover {
 
 .title-card {
   position: absolute;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 600;
   color: #ff3c7b;
   line-height: 1.2em;
@@ -384,28 +464,23 @@ li:hover {
 }
 
 .card .content .details h3 {
-  font-size: 2em;
   font-weight: 600;
   color: #ff3c7b;
   line-height: 1.2em;
 }
 
-.details .cv-data {
+.content .details .cv-data {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 50px 0 10px;
-}
-
-.content .details .cv-data h4,
-p {
   text-align: center;
-  font-size: 1.1em;
-  color: #45f3ff;
+  font-size: 1em;
   line-height: 1.2em;
   font-weight: 600;
 }
 
 .cv-data p {
   color: #45f3ff;
+  text-align: center;
 }
