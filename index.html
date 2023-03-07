@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./style.css" />
 
     <title>Pathana virasack CV</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!-- Principal Page  -->
@@ -25,7 +33,7 @@
               </div>
 
               <ul class="navbar-nav">
-                <li class="nav-item">                  
+                <li class="nav-item">
                   <a href="#cv-btn" class="nav-link">Mon CV</a>
                 </li>
                 <li class="nav-item">
@@ -51,7 +59,7 @@
               /></a>
             </div>
             <div class="media-btn">
-              <a href="#"
+              <a href="https://github.com/pathana-virasack" target="_blank"
                 ><img
                   src="./img/icons8-github.svg"
                   alt="icon github"
@@ -112,12 +120,17 @@
             l’accessibilité web à différents niveaux (HTML, CSS,JavaScript,
             React), en plus de maîtriser l’intégration à partir de maquettes.
           </p>
-          <div class="buttons">            
+          <div class="buttons">
             <div class="lines-btn"></div>
-            <button id="cv-btn"><a href="./img/Pathana Virasack (CV).pdf" download  >mon cv</a></button>
+            <button id="cv-btn">
+              <a href="./img/Pathana Virasack (CV).pdf" download>mon cv</a>
+            </button>
           </div>
         </div>
       </div>
+
+      <!-- cartes de competences -->
+
       <div class="cv-cards">
         <div class="card card-1">
           <div class="lines"></div>
@@ -249,8 +262,18 @@
       </div>
     </div>
 
-    <!-- CV CARDS -->
+    <!-- icones language programmation -->
 
+    <section class="language-icone">
+      <div class="language-icone-container">
+        <ul class="lic">
+          <li><img src="./img/html-logo.png" alt="logo html" /></li>
+          <li><img src="./img/css-logo.png" alt="logo css" /></li>
+          <li><img src="./img/javascript-logo.png" alt="logo javascript" /></li>
+          <li><img src="./img/react-native-logo.png" alt="logo react" /></li>
+        </ul>
+      </div>
+    </section>
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script src="./app.js"></script>
   </body>

@@ -133,6 +133,7 @@ li:hover {
   border: 1px solid white;
   border-radius: 10px;
   padding: 0.8rem;
+  z-index: 1000;
 }
 
 .media-btn a :hover {
@@ -219,7 +220,7 @@ h1 {
 .buttons {
   position: relative;
   width: 220px;
-  height: 40px;
+  height: 60px;
   background: #000;
   transition: 0.5s;
   margin-top: 1.5rem;
@@ -270,7 +271,7 @@ h1 {
 }
 
 #cv-btn {
-  position: absolute; 
+  position: absolute;
   background: transparent;
   top: 50%;
   left: 50%;
@@ -307,7 +308,7 @@ h1 {
 .cv-cards {
   display: flex;
   justify-content: space-around;
-  z-index: auto;
+  z-index: auto;  
 }
 
 .card {
@@ -320,7 +321,8 @@ h1 {
 
 /* ----------CV CARDS EFFECTS----- */
 .card:hover {
-  height: 550px;
+  height: 620px;
+  z-index: 1000;
 }
 
 .card .lines {
@@ -483,4 +485,37 @@ h1 {
 .cv-data p {
   color: #45f3ff;
   text-align: center;
+}
+
+/* icones languages cards */
+
+.language-icone-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem auto;
+  width: 100%;
+  height: 250px;
+}
+
+.language-icone-container ul {
+  display: flex;
+  margin: 0 auto;
+}
+
+.language-icone-container ul li {
+  display: inline-block;
+  margin: 2rem 2rem;
+  border: 2px solid #ff3c7af7 ;
+  border-radius: 15px;
+  background-color: #292929;
+  transform-style: preserve-3d;
+  perspective: 500px;
+  box-shadow: 0 35px 45px #45f3ff;
+}
+
+.language-icone-container img {
+  height: 180px;
+  width: 180px;
 }
