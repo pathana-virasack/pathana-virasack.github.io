@@ -50,7 +50,7 @@ window.addEventListener("scroll", () => {
   let scrollImg =
     (window.scrollY + window.innerHeight) / document.body.offsetHeight;
 
-  if (scrollImg > 1.3) {
+  if (scrollImg > 1.1) {
     presentationImg.style.opacity = 1;
     presentationImg.style.transform = "none";
   } else {
