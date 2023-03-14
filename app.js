@@ -17,10 +17,12 @@ new Typewriter(txtTitleAnim, {
   .typeString("<strong><span style='color: #2965f1'> CSS</span> </strong> !")
   .pauseFor(1000)
   .deleteChars(6)
-  .typeString("<strong><span style='color: #f0db4f'> JAVASCRIPT</span> </strong> !")
+  .typeString(
+    "<strong><span style='color: #f0db4f'> JAVASCRIPT</span> </strong> !"
+  )
   .pauseFor(1000)
   .deleteChars(13)
-  .typeString("<strong><span style='color: #36a3c0'> REACT</span> </strong> !")  
+  .typeString("<strong><span style='color: #36a3c0'> REACT</span> </strong> !")
   .start();
 
 // Mouse-effect
